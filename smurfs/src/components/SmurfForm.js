@@ -21,24 +21,26 @@ const SmurfForm = props => {
         props.addSmurf(smurf);
     setsmurf("");
 }}>
-    <label>Enter smurf name</label>
+    <label>Enter name</label>
     <input
     name="name"
     value={smurf.name}
     onChange={onChange}
     />
+    <br/>
     <label>Enter age</label>
     <input 
     name="age"
     value={smurf.age}
     onChange={onChange}
     />
+    <br />
     <label>Enter height</label>
     <input 
     name="height"
     value={smurf.height}
     onChange={onChange}/>
-
+<br/>
     <button type="submit">Add Smurf</button>
 </form>
     )
