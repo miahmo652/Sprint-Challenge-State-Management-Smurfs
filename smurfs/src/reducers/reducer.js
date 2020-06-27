@@ -2,7 +2,8 @@
 const initialState = {
     smurfs: [],
     isFetching: false,
-    error: ""
+    error: "",
+    addSmurf: false
 }
 
 export const reducer = (state = initialState, action) => {
@@ -26,6 +27,24 @@ switch(action.type){
             isFetching: false,
             error: action.payload
         }
+
+        
+    case "ADD_SMURF":
+        return {
+          ...state,
+          addSmurf: true
+  
+        };
+  
+      case "ADD_SUCCESS":
+        return {
+          ...state,
+          addSmurf: false,
+          smurfs: action.payload
+  
+        };
+  
+    
 
 default: 
 return state;
